@@ -387,7 +387,7 @@ body {
         width: 80vw;
         max-width: 500px;
         margin: 4rem auto 2rem;
-        order: 2;
+        /* Removed order: 2 to maintain natural flow */
     }
 
     .home-feature-img {
@@ -424,20 +424,21 @@ body {
     }
 
     .home-container {
-        /* Center vertically on mobile too, unless content overflows */
-        padding-top: 0;
-        padding-bottom: 0;
-        justify-content: center;
-        min-height: 100dvh;
-        /* Use dynamic viewport height */
+        /* Align content from top on mobile */
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        justify-content: flex-start;
+        min-height: auto;
+        /* Allow content to dictate height */
     }
 
     .feature-image-wrapper {
         width: 90vw;
-        height: 60vh;
+        height: auto;
+        max-height: 60vh;
         /* Center image */
-        margin: 0;
-        order: 2;
+        margin: 0 auto 2rem;
+        /* Removed order: 2 */
     }
 
     /* Remove obsolete footer styles */
