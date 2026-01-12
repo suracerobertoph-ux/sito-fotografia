@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roberto Surace | Photography</title>
+    <meta name="description"
+        content="Portfolio of Roberto Surace, a photographer based in Milan specializing in portrait and landscape photography.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roberto Surace | Photography">
+    <meta property="og:description" content="Portfolio of Roberto Surace, a photographer based in Milan.">
+    <meta property="og:image" content="assets/images/homepage/img20250909_10452154.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="vertical-line"></div>
+    <div class="horizontal-line"></div>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <div class="logo">ROBERTO SURACE</div>
+            <div class="logo-subtitle">photographer based in Milan</div>
+        </div>
+        <nav class="site-nav">
+            <a href="#ritratti">RITRATTI</a>
+            <a href="#paesaggio">PAESAGGIO</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+    </header>
+
+    <main class="home-container">
+        <!-- Featured Image Wrapper (Temporarily removed) -->
+        <div class="feature-image-wrapper">
+            <img src="assets/images/homepage/img20250909_10452154.jpg" class="home-feature-img" alt="Featured Work"
+                id="feature-img">
+        </div>
+
+        <!-- Navigation Arrows removed as per user request -->
+
+        <!-- Portfolio List (Temporarily removed) -->
+
+
+        <!-- Photo Grid (Dynamic) -->
+        <div id="photo-grid" class="photo-grid hidden"></div>
+
+
+
+
+    </main>
+
+    <!-- About Section (Hidden by default) -->
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox hidden">
+        <button id="close-lightbox" class="close-btn">×</button>
+        <button class="nav-btn prev-btn" id="lightbox-prev" aria-label="Previous image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Full screen view">
+        <button class="nav-btn next-btn" id="lightbox-next" aria-label="Next image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Background Image Container (Changes on Hover) -->
+    <div class="bg-preview" id="bg-preview"></div>
+
+    <script src="gallery_data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
