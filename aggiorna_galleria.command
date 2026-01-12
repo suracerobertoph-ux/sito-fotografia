@@ -7,6 +7,10 @@ OUTPUT_FILE="gallery_data.js"
 
 echo "Aggiornamento galleria in corso..."
 
+# Ottimizzazione automatica delle immagini (max 2500px)
+echo "Ottimizzazione risoluzione immagini (max 2500px)..."
+find assets/images -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" -o -name "*.JPG" -o -name "*.JPEG" -o -name "*.PNG" -o -name "*.WEBP" \) -exec sips -Z 2500 {} \; > /dev/null 2>&1
+
 # Start writing the JS file
 echo "/**" > $OUTPUT_FILE
 echo " * CONFIGURAZIONE GENERATA AUTOMATICAMENTE" >> $OUTPUT_FILE

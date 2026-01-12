@@ -6,10 +6,12 @@
 
 var GALLERY_DATA = {
     ritratti: [
-        { src: 'assets/images/ritratti/Untitled 3.jpeg' },
         { src: 'assets/images/ritratti/Untitled.jpeg' },
-        { src: 'assets/images/ritratti/img20250809_09164261.jpg' },
-        { src: 'assets/images/ritratti/img20251204_11513639.jpg' },
+        { src: 'assets/images/ritratti/img20251231_08151600.jpg' },
+        { src: 'assets/images/ritratti/img20260105_07264499.jpg' },
+        { src: 'assets/images/ritratti/img20260105_07400959.jpg' },
+        { src: 'assets/images/ritratti/img20260105_07555683.jpg' },
+        { src: 'assets/images/ritratti/img20260105_08045983.jpg' },
     ],
     paesaggio: [
         { src: 'assets/images/paesaggio/img20250821_09460027 - dimensioni grandi.jpeg' },
