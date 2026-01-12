@@ -366,11 +366,15 @@ body {
 .home-feature-img {
     width: 100%;
     height: 100%;
+    /* Ensure it fills the wrapper */
+    max-height: 100%;
+    /* Keep it within the wrapper's constraints */
+    max-width: 100%;
+    /* Extra safety */
     display: block;
     object-fit: contain;
     /* Maintain aspect ratio, fit within container */
     transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    /* Smoother, longer transition */
 }
 
 /* projects-label removed */
@@ -384,10 +388,12 @@ body {
     .feature-image-wrapper {
         position: static;
         transform: none;
-        width: 80vw;
-        max-width: 500px;
-        margin: 4rem auto 2rem;
-        /* Removed order: 2 to maintain natural flow */
+        width: 90vw;
+        /* Match larger view */
+        max-width: 100%;
+        /* Ensure no overflow */
+        margin: 2rem auto;
+        /* Natural flow */
     }
 
     .home-feature-img {
@@ -425,7 +431,8 @@ body {
 
     .home-container {
         /* Align content from top on mobile */
-        padding-top: 4rem;
+        padding-top: 6rem;
+        /* More space for header */
         padding-bottom: 2rem;
         justify-content: flex-start;
         min-height: auto;
