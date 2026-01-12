@@ -310,7 +310,7 @@ body {
 @media (max-width: 768px) {
     .photo-grid {
         column-count: 1;
-        padding: calc(var(--edge-spacing) + 4rem) 0 1rem 0;
+        padding: calc(var(--edge-spacing) + 7rem) 0 1rem 0;
         column-gap: 0.5rem;
     }
 
@@ -433,6 +433,7 @@ body {
     .home-container {
         /* Center vertically on mobile too, unless content overflows */
         padding-top: 0;
+        padding-bottom: 0;
         justify-content: center;
         min-height: 100dvh;
         /* Use dynamic viewport height */
