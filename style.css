@@ -431,28 +431,22 @@ body {
     }
 
     .home-container {
-        /* Reduce top padding to prevent pushing content too far */
-        padding-top: 15vh;
-        justify-content: flex-start;
-        /* Align top on mobile to avoid centering issues */
+        /* Center vertically on mobile too, unless content overflows */
+        padding-top: 0;
+        justify-content: center;
+        min-height: 100dvh;
+        /* Use dynamic viewport height */
     }
 
     .feature-image-wrapper {
         width: 90vw;
-        /* Use static positioning on mobile if possible, or adjust fixed */
-        /* If fixed, move it down */
-        top: 55%;
-        margin-top: 0;
         height: 60vh;
-        /* Reduce height to avoid truncation */
+        /* Center image */
+        margin: 0;
+        order: 2;
     }
 
-    /* Ensure footer is visible */
-    .site-footer {
-        z-index: 20;
-        /* Above image */
-        padding-bottom: 2rem;
-    }
+    /* Remove obsolete footer styles */
 }
 
 @media (max-height: 600px) {
@@ -485,13 +479,7 @@ body {
 
 
 
-/* Ensure footer is visible */
-.site-footer {
-    z-index: 20;
-    /* Above image */
-    padding-bottom: 2rem;
-}
-}
+
 
 @media (max-height: 600px) {
     .home-container {
@@ -668,6 +656,68 @@ body {
     opacity: 0.9;
     max-width: 65ch;
     /* Readable line length */
+}
+
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1rem;
+    max-width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+    /* Reset iOS style */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-bottom-color: var(--text-color);
+}
+
+.submit-btn {
+    align-self: flex-start;
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 1rem 3rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
 }
 
 /* Responsive */
