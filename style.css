@@ -634,6 +634,20 @@ body {
     font-weight: 300;
 }
 
+.profile-email {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.profile-email:hover {
+    opacity: 0.6;
+}
+
+
 /* Right Column: Text */
 .about-text {
     padding-top: 1rem;
