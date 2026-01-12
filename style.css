@@ -331,17 +331,15 @@ body {
 .home-container {
     flex: 1;
     display: flex;
-    justify-content: center;
-    /* Center horizontally */
+    justify-content: flex-start;
+    /* Flow naturally from top */
     align-items: center;
-    /* Center vertically */
     position: relative;
     z-index: 5;
     flex-direction: column;
     padding-left: calc(var(--edge-spacing) / 2);
-    /* Start exactly at the vertical line */
-    padding-top: 0;
-    /* Remove top padding, center vertically instead */
+    padding-top: 8rem;
+    /* Space for fixed header */
 }
 
 /* Homepage Feature Image */
@@ -350,17 +348,12 @@ body {
 /* Homepage Feature Image Wrapper */
 /* Homepage Feature Image Wrapper */
 .feature-image-wrapper {
-    position: fixed;
-    top: 50%;
-    left: calc(72.5vw - var(--edge-spacing) / 4);
-    /* Back to previous position */
-    transform: translate(-50%, -50%);
-    width: 60vw;
-    /* Increased further */
-    height: 75vh;
-    /* Increased height */
+    position: relative;
+    /* Removed fixed positioning to prevent overlap */
+    width: 90vw;
+    height: 70vh;
     max-width: 1000px;
-    /* Increased max-width */
+    margin: 2rem auto;
     z-index: 5;
     display: flex;
     align-items: center;
@@ -497,24 +490,26 @@ body {
 
 /* Old About Section Removed */
 
-/* About Page Layout */
-.about-page-body {
-    background-color: var(--bg-color);
-    background-image: var(--bg-gradient);
-    background-attachment: fixed;
-    overflow-x: hidden;
-    min-height: 100vh;
+/* About Section Integration */
+.about-section {
+    padding: 2rem var(--edge-spacing) 6rem;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    margin-top: 0;
+}
+
+.section-divider {
+    width: calc(100% - var(--edge-spacing) * 2);
+    height: 1px;
+    background: var(--text-color);
+    opacity: 0.1;
+    margin: 4rem var(--edge-spacing);
 }
 
 .about-view {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6rem var(--edge-spacing);
-    z-index: 10;
+    /* Main container for standalone view if still used, but section handles it now */
+    display: none;
 }
 
 /* Remove old overlay toggles */
@@ -617,8 +612,10 @@ body {
 
 
 /* Profile Info */
+/* Profile Info */
 .profile-info {
     text-align: left;
+    margin-top: 1.5rem;
 }
 
 .profile-name {
@@ -650,7 +647,8 @@ body {
 
 /* Right Column: Text */
 .about-text {
-    padding-top: 1rem;
+    padding-top: 0;
+    /* Align with image top */
 }
 
 .about-headline {
@@ -658,6 +656,8 @@ body {
     line-height: 1.1;
     font-weight: 400;
     /* Light/Regular feel */
+    margin-top: -0.3rem;
+    /* Tiny offset to align baseline/cap-height with image */
     margin-bottom: 3rem;
     color: var(--text-color);
     letter-spacing: -0.02em;

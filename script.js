@@ -364,18 +364,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (href === '#ritratti') {
                     selectedContext = 'ritratti';
                     populatePhotoGrid('ritratti');
-                    // Hide homepage image
+                    // Hide homepage image and about section
                     const featureWrapper = document.querySelector('.feature-image-wrapper');
+                    const aboutSection = document.getElementById('about');
                     if (featureWrapper) featureWrapper.style.display = 'none';
+                    if (aboutSection) aboutSection.style.display = 'none';
                 } else if (href === '#paesaggio') {
                     selectedContext = 'paesaggio';
                     populatePhotoGrid('paesaggio');
-                    // Hide homepage image
+                    // Hide homepage image and about section
                     const featureWrapper = document.querySelector('.feature-image-wrapper');
+                    const aboutSection = document.getElementById('about');
                     if (featureWrapper) featureWrapper.style.display = 'none';
+                    if (aboutSection) aboutSection.style.display = 'none';
                 }
             }
-            // For real pages (like about.html), let the link work normally
         });
     });
 
@@ -384,9 +387,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (logoContainer) {
         logoContainer.style.cursor = 'pointer';
         logoContainer.addEventListener('click', () => {
-            // Show homepage feature image
+            // Show homepage feature image and about section
             const featureWrapper = document.querySelector('.feature-image-wrapper');
+            const aboutSection = document.getElementById('about');
             if (featureWrapper) featureWrapper.style.display = 'flex';
+            if (aboutSection) aboutSection.style.display = 'block';
 
             // Hide photo grid
             if (photoGrid) photoGrid.classList.add('hidden');
