@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0YQZZYHVP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y0YQZZYHVP');
+    </script>
+    <title>Pacchetti Ritratti | Roberto Surace</title>
+    <meta name="description"
+        content="Pacchetti per ritratti fotografici su pellicola. Sviluppo e stampa fine art in camera oscura.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="packages-page">
+    <div class="vertical-line"></div>
+    <div class="horizontal-line"></div>
+
+    <header class="site-header">
+        <div class="logo-container" onclick="window.location.href='index.html'" style="cursor: pointer;">
+            <div class="logo">ROBERTO SURACE</div>
+            <div class="logo-subtitle">photographer based in Milan</div>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">HOME</a>
+            <a href="index.html#ritratti">RITRATTI</a>
+            <a href="index.html#paesaggio">PAESAGGIO</a>
+        </nav>
+    </header>
+
+    <main class="packages-container">
+        <div class="packages-header">
+            <h1 class="packages-title">Pacchetti Ritratti</h1>
+            <p class="packages-intro">Proposte dedicate esclusivamente alla fotografia analogica, dal rullino alla
+                stampa fine art in camera oscura.</p>
+        </div>
+
+        <div class="packages-grid">
+            <!-- Tier 1: Essenziale -->
+            <div class="package-card">
+                <div class="package-type">Essenziale</div>
+                <h2 class="package-name">Stampa Singola</h2>
+                <div class="package-price">€200</div>
+                <ul class="package-features">
+                    <li>Sessione fotografica su pellicola</li>
+                    <li>Sviluppo dei negativi</li>
+                    <li>3 Scansioni digitali in alta risoluzione</li>
+                    <li>1 Stampa fine art in camera oscura</li>
+                </ul>
+                <a href="mailto:suraceroberto.ph@gmail.com?subject=Richiesta%20Pacchetto%20Stampa%20Singola"
+                    class="package-cta">Prenota</a>
+            </div>
+
+            <!-- Tier 2: Originale -->
+            <div class="package-card featured">
+                <div class="package-type">Consigliato</div>
+                <h2 class="package-name">Portfolio</h2>
+                <div class="package-price">€400</div>
+                <ul class="package-features">
+                    <li>Sessione fotografica su pellicola</li>
+                    <li>Sviluppo dei negativi</li>
+                    <li>10 Scansioni digitali in alta risoluzione</li>
+                    <li>5 Stampe fine art in camera oscura</li>
+                </ul>
+                <a href="mailto:suraceroberto.ph@gmail.com?subject=Richiesta%20Pacchetto%20Portfolio"
+                    class="package-cta">Prenota</a>
+            </div>
+
+            <!-- Tier 3: Premium -->
+            <div class="package-card">
+                <div class="package-type">Premium</div>
+                <h2 class="package-name">Esperienza</h2>
+                <div class="package-price">Su progetto personalizzato</div>
+                <ul class="package-features">
+                    <li>Due giornate di shooting</li>
+                    <li>Progetto completamente personalizzato</li>
+                    <li>Dallo studio del soggetto alla stampa finale</li>
+                    <li>Sviluppo e provini a contatto</li>
+                    <li>Selezione stampe fine art inclusa</li>
+                </ul>
+                <a href="mailto:suraceroberto.ph@gmail.com?subject=Richiesta%20Pacchetto%20Esperienza"
+                    class="package-cta">Prenota</a>
+            </div>
+        </div>
+
+        <div class="packages-footer">
+            <p>Disponibile per commissioni in Lombardia e oltre. Ogni pacchetto è personalizzabile in base alle tue
+                esigenze.</p>
+            <a href="index.html" class="back-home">Torna alla home</a>
+        </div>
+    </main>
+
+    <script>
+        // Minimal logic for the packages page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Header hide on scroll logic (duplicated from script.js for standalone page)
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+            const header = document.querySelector('.site-header');
+
+            function updateHeaderVisibility() {
+                if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                    header.classList.add('hidden-header');
+                } else {
+                    header.classList.remove('hidden-header');
+                }
+                lastScrollY = window.scrollY;
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateHeaderVisibility);
+                    ticking = true;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
